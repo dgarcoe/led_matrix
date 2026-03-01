@@ -97,7 +97,7 @@ void setup() {
         NIMBLE_PROPERTY::READ | NIMBLE_PROPERTY::WRITE
     );
     pStatusChar->setCallbacks(&charCallbacks);
-    pStatusChar->setValue(currentStatus);
+    pStatusChar->setValue((uint8_t)currentStatus);
     pService->start();
 
     NimBLEAdvertising* pAdvertising = NimBLEDevice::getAdvertising();
